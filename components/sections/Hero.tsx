@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
+import { MyCompanyLogoSVG } from "@/components/SVGS";
 
 /**
  * Hook detecting prefers-reduced-motion
@@ -76,10 +77,10 @@ function Tally({ target, suffix = "", prefersReducedMotion }: TallyProps) {
   }, [target, prefersReducedMotion]);
 
   return (
-    <span>
+    <>
       {count}
       {suffix}
-    </span>
+    </>
   );
 }
 
@@ -103,7 +104,7 @@ export function Hero({ showNav = false }: HeroProps) {
 
   return (
     <section
-      className={`w-full flex flex-col bg-[#E0231B] text-[#FFFFFF] overflow-hidden relative select-none font-['Barlow',system-ui,sans-serif] ${
+      className={`w-full flex flex-col bg-[#FBF9F5] dark:bg-[#0D0E12] text-[#111318] dark:text-[#F3F4F6] overflow-hidden relative select-none font-['Barlow',system-ui,sans-serif] transition-colors duration-300 ${
         showNav ? "min-h-[100dvh]" : "min-h-[calc(100dvh-84px)]"
       }`}
     >
@@ -171,35 +172,32 @@ export function Hero({ showNav = false }: HeroProps) {
               }
             }
             .press-link-focus:focus-visible {
-              outline: 2px solid #0B0B0B;
+              outline: 2px solid #111318;
               outline-offset: 4px;
             }
           `,
         }}
       />
 
-      {/* Decorative repeating stripe background layer */}
+      {/* Warm tactile stripe texture background layer */}
       <div
-        className="absolute inset-0 pointer-events-none z-0"
+        className="absolute inset-0 pointer-events-none z-0 opacity-70 dark:opacity-20"
         style={{
           backgroundImage:
-            "repeating-linear-gradient(-45deg, rgba(11,11,11,0.03) 0 2px, transparent 2px 14px)",
+            "repeating-linear-gradient(-45deg, rgba(17,19,24,0.03) 0 2px, transparent 2px 14px)",
         }}
         aria-hidden="true"
       />
 
       {/* Optional Standalone NAVIGATION: h-[84px] */}
       {showNav && (
-        <header className="relative z-10 h-[84px] flex items-center justify-between px-6 md:px-10 shrink-0">
+        <header className="relative z-10 h-[84px] flex items-center justify-between px-6 md:px-10 shrink-0 border-b border-[#111318]/10 dark:border-border/40">
           <a
             href="/"
-            className="flex items-center gap-3 press-link-focus group"
-            aria-label="PRESSROOM Home"
+            className="flex items-center press-link-focus group select-none py-1"
+            aria-label="Virtanex Labs Home"
           >
-            <span className="w-3.5 h-3.5 bg-[#0B0B0B] shrink-0" aria-hidden="true" />
-            <span className="press-font-display text-[22px] tracking-[0.08em] text-[#0B0B0B] leading-none">
-              PRESSROOM
-            </span>
+            <MyCompanyLogoSVG className="h-8 md:h-9 w-auto text-[#111318] dark:text-[#FFFFFF] group-hover:opacity-90 transition-opacity" />
           </a>
 
           <nav
@@ -210,7 +208,7 @@ export function Hero({ showNav = false }: HeroProps) {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="press-font-barlow font-semibold text-[13px] uppercase tracking-[0.16em] text-[#FFFFFF]/90 hover:text-[#FFFFFF] transition-colors press-link-focus"
+                className="press-font-barlow font-semibold text-[13px] uppercase tracking-[0.16em] text-[#111318]/75 hover:text-[#111318] dark:text-[#FFFFFF]/75 dark:hover:text-[#FFFFFF] transition-colors press-link-focus"
               >
                 {link}
               </a>
@@ -219,7 +217,7 @@ export function Hero({ showNav = false }: HeroProps) {
 
           <a
             href="#contact"
-            className="press-font-barlow font-semibold text-[13px] uppercase tracking-[0.14em] px-5 py-3 rounded-none bg-[#0B0B0B] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#0B0B0B] transition-colors press-link-focus"
+            className="press-font-barlow font-semibold text-[13px] uppercase tracking-[0.14em] px-5 py-3 rounded-none bg-[#111318] text-[#FBF9F5] hover:bg-primary hover:text-white dark:bg-white dark:text-[#0D0E12] dark:hover:bg-primary dark:hover:text-white transition-colors press-link-focus"
           >
             Start a project
           </a>
@@ -230,18 +228,18 @@ export function Hero({ showNav = false }: HeroProps) {
       <div className="relative z-10 flex-1 flex flex-col px-6 md:px-10 pt-8 md:pt-10">
         {/* Vertical Strapline (desktop only): right-10 top-[120px] */}
         <div
-          className="press-fade hidden md:block absolute right-10 top-[60px] md:top-[120px] press-font-barlow font-semibold text-[12px] uppercase tracking-[0.2em] text-[#FFFFFF] select-none"
+          className="press-fade hidden md:block absolute right-10 top-[60px] md:top-[120px] press-font-barlow font-semibold text-[12px] uppercase tracking-[0.2em] text-[#6B7280] dark:text-[#9CA3AF] select-none"
           style={{
             writingMode: "vertical-rl",
             animationDelay: "900ms",
           }}
           aria-hidden="true"
         >
-          Independent studio · Est. 2014
+          Virtanex Labs · Helsinki, FI
         </div>
 
         {/* Headline H1: stamps in once on load */}
-        <h1 className="press-font-display uppercase text-[#0B0B0B] leading-[0.9] tracking-[-0.01em] text-[clamp(72px,13vw,176px)] m-0 select-none">
+        <h1 className="press-font-display uppercase text-[#111318] dark:text-[#FFFFFF] leading-[0.9] tracking-[-0.01em] text-[clamp(72px,13vw,176px)] m-0 select-none">
           <span className="sr-only">We print bold ideas on screens.</span>
           <span aria-hidden="true" className="flex flex-col">
             {HEADLINE_LINES.map((line, index) => (
@@ -269,40 +267,40 @@ export function Hero({ showNav = false }: HeroProps) {
             href="#work"
             className="flex flex-col items-end gap-2 group press-link-focus cursor-pointer"
           >
-            <span className="flex items-center gap-2 press-font-barlow font-bold text-[13px] uppercase tracking-[0.22em] text-[#0B0B0B] group-hover:text-[#FFFFFF] transition-colors">
+            <span className="flex items-center gap-2 press-font-barlow font-bold text-[13px] uppercase tracking-[0.22em] text-[#111318] dark:text-foreground group-hover:text-primary transition-colors">
               SEE OUR WORK
-              <ArrowRight className="w-4 h-4 stroke-[2.5] text-[#0B0B0B] group-hover:text-[#FFFFFF] transition-colors" />
+              <ArrowRight className="w-4 h-4 stroke-[2.5] text-[#111318] dark:text-foreground group-hover:text-primary transition-colors" />
             </span>
             <span
-              className="w-full h-1 bg-[#0B0B0B] block"
+              className="w-full h-1 bg-[#111318] dark:bg-foreground group-hover:bg-primary transition-colors block"
               aria-hidden="true"
             />
           </a>
         </div>
       </div>
 
-      {/* STAT BAR: bg-press-ink px-6 md:px-10 py-8 grid grid-cols-2 md:flex */}
+      {/* STAT BAR: Grounded deep ink bar with counting numbers */}
       <div
-        className="press-fade relative z-10 bg-[#0B0B0B] px-6 md:px-10 py-8 grid grid-cols-2 md:flex md:items-center md:justify-between gap-y-8 shrink-0"
+        className="press-fade relative z-10 bg-[#111318] dark:bg-[#14151C] px-6 md:px-10 py-8 grid grid-cols-2 md:flex md:items-center md:justify-between gap-y-8 shrink-0 border-t border-[#111318]/10 dark:border-border/30"
         style={{ animationDelay: "400ms" }}
       >
         {STATS_DATA.map((stat, idx) => (
           <React.Fragment key={stat.label}>
             <div className="flex flex-col">
-              <span className="press-font-display text-[32px] md:text-[40px] leading-none text-[#FFFFFF] tabular-nums">
+              <span className="press-font-display text-[32px] md:text-[40px] leading-none text-[#FBF9F5] tabular-nums">
                 <Tally
                   target={stat.target}
                   suffix={stat.suffix}
                   prefersReducedMotion={prefersReducedMotion}
                 />
               </span>
-              <span className="press-font-barlow font-semibold text-[11px] uppercase tracking-[0.18em] text-[#FFFFFF]/50 mt-2">
+              <span className="press-font-barlow font-semibold text-[11px] uppercase tracking-[0.18em] text-[#FBF9F5]/55 mt-2">
                 {stat.label}
               </span>
             </div>
             {idx < STATS_DATA.length - 1 && (
               <div
-                className="hidden md:block w-px h-14 bg-[#FFFFFF]/10"
+                className="hidden md:block w-px h-14 bg-[#FBF9F5]/10"
                 aria-hidden="true"
               />
             )}

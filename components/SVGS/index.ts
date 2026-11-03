@@ -23,4 +23,4 @@ export { default as CloudflareSVG } from "./cloudflare_svg";
 export { default as GitHubSVG } from "./github_svg";
 export { default as LinkedInSVG } from "./linkedin_svg";
 export { default as XSvg } from "./x_svg";
-
+export { default as MyCompanyLogoSVG, MyCompanyLogoSVG as VirtanexLogoSVG } from "./my_company_logo_svg";

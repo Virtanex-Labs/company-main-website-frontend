@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
-import { GitHubSVG, LinkedInSVG, XSvg } from "@/components/SVGS";
+import { GitHubSVG, LinkedInSVG, XSvg, MyCompanyLogoSVG } from "@/components/SVGS";
 
 const footerLinks = {
   Services: [
@@ -30,11 +30,8 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-10 md:grid-cols-5 mb-12">
           {/* Brand */}
           <div className="col-span-2">
-            <Link href="/" className="flex items-center gap-2 w-fit group mb-4">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground text-sm font-bold">
-                V
-              </span>
-              <span className="text-sm font-semibold text-foreground">Virtanex Labs</span>
+            <Link href="/" className="inline-block group mb-4 select-none" aria-label="Virtanex Labs Home">
+              <MyCompanyLogoSVG className="h-8 md:h-9 w-auto text-foreground group-hover:opacity-90 transition-opacity" />
             </Link>
             <p className="text-xs text-muted-foreground leading-relaxed max-w-[220px] mb-5">
               {siteConfig.tagline} Finland-based. Globally trusted.
