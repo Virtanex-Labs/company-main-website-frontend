@@ -11,8 +11,8 @@ const SVGComponent = () => (
     <rect
       x={2}
       y={2}
-      width={28}
-      height={28}
+      width={24}
+      height={24}
       rx={1.312}
       style={{
         fill: "#3178c6",
