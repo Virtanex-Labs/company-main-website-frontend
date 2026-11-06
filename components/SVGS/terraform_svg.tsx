@@ -2,15 +2,36 @@ import * as React from "react";
 
 const TerraformSVG = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
+    width="800px"
+    height="800px"
+    viewBox="0 0 32 32"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 128 128"
-    width={24}
-    height={24}
     {...props}
   >
-    <path
-      fill="#844FBA"
-      d="M48.2 41.6v37.7L15.6 59.9V22.2l32.6 19.4zm3.9 39.8v37.6l32.5-19.3V62L52.1 81.4zm0-79.3v37.6L84.6 20.3 52.1 2.1zm36.4 57.8l32.5-19.3V2.8L88.5 22.1v37.8z"
+    <title>{"file_type_terraform"}</title>
+    <polygon
+      points="12.042 6.858 20.071 11.448 20.071 20.462 12.042 15.868 12.042 6.858 12.042 6.858"
+      style={{
+        fill: "#813cf3",
+      }}
+    />
+    <polygon
+      points="20.5 20.415 28.459 15.84 28.459 6.887 20.5 11.429 20.5 20.415 20.5 20.415"
+      style={{
+        fill: "#813cf3",
+      }}
+    />
+    <polygon
+      points="3.541 11.01 11.571 15.599 11.571 6.59 3.541 2 3.541 11.01 3.541 11.01"
+      style={{
+        fill: "#813cf3",
+      }}
+    />
+    <polygon
+      points="12.042 25.41 20.071 30 20.071 20.957 12.042 16.368 12.042 25.41 12.042 25.41"
+      style={{
+        fill: "#813cf3",
+      }}
     />
   </svg>
 );

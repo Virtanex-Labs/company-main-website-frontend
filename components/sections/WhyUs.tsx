@@ -38,25 +38,25 @@ const reasons = [
 
 export function WhyUs() {
   return (
-    <section className="py-24 px-6 bg-muted/30">
+    <section className="py-16 sm:py-24 px-5 sm:px-6 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-14 text-center">
+        <div className="mb-10 sm:mb-14 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">
             Why Virtanex Labs
           </p>
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
             Built Different, Delivered Better
           </h2>
-          <p className="mt-3 text-sm text-muted-foreground max-w-xl mx-auto">
+          <p className="mt-3 text-xs sm:text-sm text-muted-foreground max-w-xl mx-auto">
             We don&apos;t just write code — we take ownership of your product&apos;s success.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="group relative flex flex-col gap-4 rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:-translate-y-0.5"
+              className="group relative flex flex-col gap-3.5 sm:gap-4 rounded-2xl border border-border bg-card p-5 sm:p-7 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:-translate-y-0.5"
             >
               <div className={cn("inline-flex w-fit rounded-xl p-2.5", reason.bg)}>
                 <reason.icon className={cn("size-5", reason.color)} />

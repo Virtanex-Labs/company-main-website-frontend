@@ -4,11 +4,13 @@ import { GitHubSVG, LinkedInSVG, XSvg, MyCompanyLogoSVG } from "@/components/SVG
 
 const footerLinks = {
   Services: [
-    { label: "Web Development", href: "/services/web-development" },
-    { label: "Mobile Apps", href: "/services/mobile-apps" },
-    { label: "Custom Software", href: "/services/custom-software" },
-    { label: "UI/UX Design", href: "/services/ui-ux-design" },
-    { label: "AI Automation", href: "/services/ai-automation" },
+    { label: "Custom Software", href: "/services/custom-software-development" },
+    { label: "AI & Machine Learning", href: "/services/ai-machine-learning" },
+    { label: "Data Engineering", href: "/services/data-engineering-analytics" },
+    { label: "System Integration", href: "/services/enterprise-system-integration" },
+    { label: "Process Automation", href: "/services/business-process-automation" },
+    { label: "Cloud & DevOps", href: "/services/cloud-devops-engineering" },
+    { label: "Product Engineering", href: "/services/product-engineering" },
   ],
   Company: [
     { label: "About", href: "/about" },
@@ -25,19 +27,19 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-muted/20 px-6 pt-16 pb-8">
+    <footer className="border-t border-border bg-muted/20 px-5 sm:px-6 pt-12 sm:pt-16 pb-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-5 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-8 sm:gap-10 mb-10 sm:mb-12">
           {/* Brand */}
-          <div className="col-span-2">
-            <Link href="/" className="inline-block group mb-4 select-none" aria-label="Virtanex Labs Home">
-              <MyCompanyLogoSVG className="h-8 md:h-9 w-auto text-foreground group-hover:opacity-90 transition-opacity" />
+          <div className="col-span-2 sm:col-span-2 md:col-span-2">
+            <Link href="/" className="inline-block group mb-3 sm:mb-4 select-none" aria-label="Virtanex Labs Home">
+              <MyCompanyLogoSVG className="h-7 sm:h-8 md:h-9 w-auto text-foreground group-hover:opacity-90 transition-opacity" />
             </Link>
-            <p className="text-xs text-muted-foreground leading-relaxed max-w-[220px] mb-5">
+            <p className="text-xs text-muted-foreground leading-relaxed max-w-[220px] mb-4 sm:mb-5">
               {siteConfig.tagline} Finland-based. Globally trusted.
             </p>
             {/* Socials */}
-            <div className="flex gap-3">
+            <div className="flex gap-2.5 sm:gap-3">
               <a
                 href={siteConfig.socials.github}
                 target="_blank"

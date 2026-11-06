@@ -34,16 +34,16 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section className="py-24 px-6 bg-muted/30">
+    <section className="py-16 sm:py-24 px-5 sm:px-6 bg-muted/30">
       <div className="max-w-3xl mx-auto">
-        <div className="mb-12 text-center">
+        <div className="mb-8 sm:mb-12 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">
             FAQ
           </p>
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
             Questions We Hear Often
           </h2>
-          <p className="mt-3 text-sm text-muted-foreground max-w-md mx-auto">
+          <p className="mt-3 text-xs sm:text-sm text-muted-foreground max-w-md mx-auto">
             Can&apos;t find your answer here? Reach out at{" "}
             <a href="mailto:contact@virtanexlabs.com" className="text-primary underline underline-offset-2">
               contact@virtanexlabs.com

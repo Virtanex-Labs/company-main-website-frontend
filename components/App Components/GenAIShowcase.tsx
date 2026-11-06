@@ -109,29 +109,29 @@ export function GenAIShowcase({
   return (
     <section
       className={cn(
-        "w-full max-w-6xl mx-auto p-4 sm:p-6 lg:p-8",
+        "w-full max-w-6xl mx-auto p-3 sm:p-6 lg:p-8",
         className
       )}
     >
-      <div className="relative overflow-hidden rounded-3xl bg-white dark:bg-zinc-950 border border-slate-200/80 dark:border-zinc-800 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] p-8 sm:p-12 lg:p-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div className="relative overflow-hidden rounded-3xl bg-white dark:bg-zinc-950 border border-slate-200/80 dark:border-zinc-800 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] p-6 sm:p-10 lg:p-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
           
           {/* Left Column: Heading, Description & Action */}
-          <div className="lg:col-span-5 flex flex-col items-start justify-center space-y-6 sm:space-y-8">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#0f172a] dark:text-zinc-50 leading-[1.12]">
+          <div className="lg:col-span-5 flex flex-col items-start justify-center space-y-5 sm:space-y-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0f172a] dark:text-zinc-50 leading-[1.12]">
               {title}
             </h2>
 
-            <p className="text-slate-500 dark:text-zinc-400 text-sm sm:text-base md:text-lg leading-relaxed max-w-md font-normal">
+            <p className="text-slate-500 dark:text-zinc-400 text-xs sm:text-base md:text-lg leading-relaxed max-w-md font-normal">
               {description}
             </p>
 
-            <div>
+            <div className="w-full sm:w-auto">
               {buttonHref ? (
                 <a
                   href={buttonHref}
                   onClick={onButtonClick}
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#0f172a] hover:bg-[#1e293b] active:scale-[0.98] text-white text-sm font-semibold tracking-wide shadow-md hover:shadow-lg transition-all duration-200"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#0f172a] hover:bg-[#1e293b] active:scale-[0.98] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-md hover:shadow-lg transition-all duration-200"
                 >
                   {buttonText}
                 </a>
@@ -139,7 +139,7 @@ export function GenAIShowcase({
                 <button
                   type="button"
                   onClick={onButtonClick}
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#0f172a] hover:bg-[#1e293b] active:scale-[0.98] text-white text-sm font-semibold tracking-wide shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#0f172a] hover:bg-[#1e293b] active:scale-[0.98] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer"
                 >
                   {buttonText}
                 </button>
@@ -149,7 +149,7 @@ export function GenAIShowcase({
 
           {/* Right Column: Interactive Expandable Accordion Strip */}
           <div className="lg:col-span-7 flex justify-center lg:justify-end w-full">
-            <div className="flex items-center gap-2 sm:gap-3 w-full h-[380px] sm:h-[420px] md:h-[450px]">
+            <div className="flex items-center gap-1.5 sm:gap-3 w-full h-[320px] sm:h-[400px] md:h-[450px]">
               {items.map((item, index) => {
                 const isActive = activeIndex === index;
 
@@ -225,7 +225,7 @@ export function GenAIShowcase({
                       )}
                     >
                       <span
-                        className="text-white/95 text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap drop-shadow-sm transition-transform duration-300 group-hover:text-white"
+                        className="text-white/95 text-[10px] sm:text-xs md:text-sm font-semibold tracking-wide whitespace-nowrap drop-shadow-sm transition-transform duration-300 group-hover:text-white"
                         style={{
                           writingMode: "vertical-rl",
                           textOrientation: "mixed",

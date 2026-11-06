@@ -59,15 +59,15 @@ const TICKER_REVIEWS = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 overflow-hidden border-t border-border/40">
-      <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
+    <section className="py-16 sm:py-24 overflow-hidden border-t border-border/40">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 mb-6 sm:mb-8 text-center">
         <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">
           Client Stories
         </p>
-        <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
           Trusted by High-Growth Teams Worldwide
         </h2>
-        <p className="mt-3 text-sm text-muted-foreground max-w-lg mx-auto">
+        <p className="mt-3 text-xs sm:text-sm text-muted-foreground max-w-lg mx-auto">
           See how companies partner with Virtanex Labs to launch faster and scale confidently.
         </p>
       </div>

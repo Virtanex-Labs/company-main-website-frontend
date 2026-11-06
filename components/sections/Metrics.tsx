@@ -7,13 +7,13 @@ const metrics = [
 
 export function Metrics() {
   return (
-    <section className="py-24 px-6 bg-foreground dark:bg-muted/30">
+    <section className="py-16 sm:py-24 px-5 sm:px-6 bg-foreground dark:bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-12 text-center">
+        <div className="mb-8 sm:mb-12 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-background/60 dark:text-muted-foreground mb-2">
             By The Numbers
           </p>
-          <h2 className="text-3xl font-bold text-background dark:text-foreground sm:text-4xl">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-background dark:text-foreground">
             Results That Speak
           </h2>
         </div>
@@ -22,15 +22,15 @@ export function Metrics() {
           {metrics.map((m) => (
             <div
               key={m.label}
-              className="flex flex-col items-center justify-center gap-1 bg-foreground dark:bg-card px-6 py-10 text-center"
+              className="flex flex-col items-center justify-center gap-1 bg-foreground dark:bg-card px-3 sm:px-6 py-6 sm:py-10 text-center"
             >
-              <span className="text-4xl font-extrabold text-primary dark:text-primary sm:text-5xl">
+              <span className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-primary dark:text-primary">
                 {m.value}
               </span>
-              <span className="text-sm font-semibold text-background dark:text-foreground mt-1">
+              <span className="text-xs sm:text-sm font-semibold text-background dark:text-foreground mt-1">
                 {m.label}
               </span>
-              <span className="text-xs text-background/50 dark:text-muted-foreground">
+              <span className="text-[11px] sm:text-xs text-background/50 dark:text-muted-foreground">
                 {m.sublabel}
               </span>
             </div>
