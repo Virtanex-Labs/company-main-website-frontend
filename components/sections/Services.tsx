@@ -22,6 +22,7 @@ import {
   Sparkles,
   ChevronDown,
   ChevronUp,
+  Globe,
 } from "lucide-react";
 import { SERVICES_LIST, SERVICE_CATEGORIES } from "@/lib/services-data";
 
@@ -37,6 +38,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
   CheckCircle2,
   Users2,
   Compass,
+  Globe,
 };
 
 const INITIAL_SERVICE_COUNT = 6;

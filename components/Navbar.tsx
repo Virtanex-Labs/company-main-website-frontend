@@ -9,6 +9,7 @@ import { MyCompanyLogoSVG } from "@/components/SVGS";
 const NAV_LINKS = [
   { label: "Work", href: "/portfolio" },
   { label: "Services", href: "/services" },
+  { label: "Offers", href: "/offers" },
   { label: "Studio", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

@@ -2,7 +2,7 @@ export interface ServiceDetail {
   slug: string;
   number: string;
   title: string;
-  category: "core" | "ai-data" | "systems" | "quality";
+  category: "web" | "core" | "ai-data" | "systems" | "quality";
   categoryLabel: string;
   tagline: string;
   shortDescription: string;
@@ -19,7 +19,8 @@ export interface ServiceDetail {
 }
 
 export const SERVICE_CATEGORIES = [
-  { id: "all", label: "All Capabilities (11)" },
+  { id: "all", label: "All Capabilities (12)" },
+  { id: "web", label: "Web Development" },
   { id: "core", label: "Software & SaaS Engineering" },
   { id: "ai-data", label: "AI, Data & Automation" },
   { id: "systems", label: "Enterprise Systems & Cloud" },
@@ -87,8 +88,69 @@ export const SERVICES_LIST: ServiceDetail[] = [
     ],
   },
   {
-    slug: "ai-machine-learning",
+    slug: "web-development",
     number: "02",
+    title: "Web Development",
+    category: "web",
+    categoryLabel: "Web Engineering",
+    tagline: "High-performance web applications, modern responsive platforms, and SEO-optimized digital experiences.",
+    shortDescription:
+      "We design and build blazing-fast, accessible, and conversion-focused web applications and marketing platforms using Next.js, React, TypeScript, and modern headless architectures.",
+    longDescription:
+      "From high-traffic consumer web portals and dynamic SaaS frontends to headless e-commerce platforms and content-rich marketing engines, our web development practice merges Nordic design aesthetics with uncompromising performance engineering. We guarantee sub-second initial page loads, 95+ Lighthouse scores, complete accessibility (WCAG AA), responsive fidelity across every device, and technical SEO architectures that dominate search rankings.",
+    iconName: "Globe",
+    whatItIncludes: [
+      "Modern full-stack web applications built on Next.js 15 & React 19",
+      "Headless CMS architecture (Sanity, Contentful, Strapi) with live visual editing",
+      "High-converting marketing websites and dynamic product landing pages",
+      "Pixel-perfect responsive design tailored for mobile, tablet, and desktop",
+      "Core Web Vitals optimization, technical SEO, and OpenGraph social metadata",
+      "Progressive Web Apps (PWAs) with offline caching and background sync",
+    ],
+    deliverables: [
+      "Production-grade, type-safe Next.js codebase with 100% intellectual property ownership",
+      "Lighthouse 95+ audit score guarantees for Performance, Accessibility, and SEO",
+      "Intuitive headless CMS configured for self-serve marketing and content updates",
+      "Automated CI/CD deployment pipelines on Vercel, AWS Amplify, or Cloudflare Pages",
+      "Structured data schemas (JSON-LD), sitemaps, and robots.txt technical SEO configuration",
+      "Cross-browser testing reports across Chrome, Safari, Firefox, Edge, and iOS/Android",
+    ],
+    technologies: [
+      "Next.js / React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Radix UI / Shadcn",
+      "Headless CMS (Sanity / Strapi)",
+      "Node.js",
+      "GraphQL / REST",
+      "Vercel / Cloudflare",
+    ],
+    businessOutcomes: [
+      "Sub-second page speeds boosting organic search rank, dwell time, and conversions",
+      "Independent marketing teams capable of publishing content without engineer intervention",
+      "Rock-solid mobile responsiveness guaranteeing seamless experiences on any screen",
+    ],
+    clientTrustNote: "100% source code ownership, clean git history, and 60-day post-launch warranty.",
+    timeline: "3–8 weeks typical delivery",
+    engagementPricing: "Fixed-price milestone delivery or dedicated sprint-based model",
+    faqs: [
+      {
+        q: "What web frameworks and technologies do you specialize in?",
+        a: "We are Next.js and React specialists, building with TypeScript and Tailwind CSS for superior speed, developer velocity, and long-term maintainability.",
+      },
+      {
+        q: "Will our marketing team be able to edit content without code changes?",
+        a: "Yes. We integrate intuitive headless CMS solutions (such as Sanity, Strapi, or Contentful) so your team can easily update copy, upload assets, and create new landing pages effortlessly.",
+      },
+      {
+        q: "How do you ensure top-tier SEO and Core Web Vitals?",
+        a: "We implement server-side rendering (SSR), static site generation (SSG), automatic responsive image pipelines, structured schema markup, and rigorous performance audits.",
+      },
+    ],
+  },
+  {
+    slug: "ai-machine-learning",
+    number: "03",
     title: "AI & Machine Learning",
     category: "ai-data",
     categoryLabel: "AI & Intelligence",
@@ -143,7 +205,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
   },
   {
     slug: "data-engineering-analytics",
-    number: "03",
+    number: "04",
     title: "Data Engineering & Analytics",
     category: "ai-data",
     categoryLabel: "Data Infrastructure",
@@ -198,7 +260,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
   },
   {
     slug: "enterprise-system-integration",
-    number: "04",
+    number: "05",
     title: "Enterprise System Integration",
     category: "systems",
     categoryLabel: "System Integration",
@@ -252,7 +314,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
   },
   {
     slug: "business-process-automation",
-    number: "05",
+    number: "06",
     title: "Business Process Automation",
     category: "ai-data",
     categoryLabel: "Workflow Automation",
@@ -306,7 +368,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
   },
   {
     slug: "cloud-devops-engineering",
-    number: "06",
+    number: "07",
     title: "Cloud & DevOps Engineering",
     category: "systems",
     categoryLabel: "Cloud & Infrastructure",
@@ -361,7 +423,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
   },
   {
     slug: "product-engineering",
-    number: "07",
+    number: "08",
     title: "Product Engineering",
     category: "core",
     categoryLabel: "Product & MVP",
@@ -415,7 +477,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
   },
   {
     slug: "ui-ux-digital-product-design",
-    number: "08",
+    number: "09",
     title: "UI/UX & Digital Product Design",
     category: "quality",
     categoryLabel: "Product Design",
@@ -467,7 +529,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
   },
   {
     slug: "software-testing-qa",
-    number: "09",
+    number: "10",
     title: "Software Testing & QA",
     category: "quality",
     categoryLabel: "Quality Assurance",
@@ -520,7 +582,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
   },
   {
     slug: "dedicated-development-teams",
-    number: "10",
+    number: "11",
     title: "Dedicated Development Teams",
     category: "core",
     categoryLabel: "Staff Augmentation",
@@ -574,7 +636,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
   },
   {
     slug: "technical-consulting",
-    number: "11",
+    number: "12",
     title: "Technical Consulting",
     category: "systems",
     categoryLabel: "Advisory & Strategy",
@@ -625,11 +687,9 @@ export const SERVICES_LIST: ServiceDetail[] = [
   },
 ];
 
+
 // Helper to look up service by slug, including backwards compatibility for older links
 export function getServiceBySlug(slug: string): ServiceDetail | undefined {
-  if (slug === "web-development") {
-    return SERVICES_LIST.find((s) => s.slug === "custom-software-development");
-  }
   if (slug === "mobile-apps") {
     return SERVICES_LIST.find((s) => s.slug === "product-engineering");
   }

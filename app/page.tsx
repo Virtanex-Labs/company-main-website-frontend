@@ -10,6 +10,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import Footer from "@/components/Footer";
+import { HeroTwo } from "@/components/sections/HeroTwo";
 
 export default function Home() {
   return (

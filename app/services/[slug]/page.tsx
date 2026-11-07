@@ -21,6 +21,7 @@ import {
   Sparkles,
   FileCheck,
   Check,
+  Globe,
 } from "lucide-react";
 import { SERVICES_LIST, getServiceBySlug } from "@/lib/services-data";
 
@@ -36,6 +37,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
   CheckCircle2,
   Users2,
   Compass,
+  Globe,
 };
 
 interface Props {
@@ -46,7 +48,6 @@ export async function generateStaticParams() {
   const allSlugs = SERVICES_LIST.map((s) => ({ slug: s.slug }));
   // Legacy alias redirects/routes
   const legacySlugs = [
-    { slug: "web-development" },
     { slug: "mobile-apps" },
     { slug: "custom-software" },
     { slug: "ui-ux-design" },

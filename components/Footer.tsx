@@ -4,20 +4,26 @@ import { GitHubSVG, LinkedInSVG, XSvg, MyCompanyLogoSVG } from "@/components/SVG
 
 const footerLinks = {
   Services: [
+    { label: "Web Development", href: "/services/web-development" },
     { label: "Custom Software", href: "/services/custom-software-development" },
     { label: "AI & Machine Learning", href: "/services/ai-machine-learning" },
     { label: "Data Engineering", href: "/services/data-engineering-analytics" },
-    { label: "System Integration", href: "/services/enterprise-system-integration" },
     { label: "Process Automation", href: "/services/business-process-automation" },
     { label: "Cloud & DevOps", href: "/services/cloud-devops-engineering" },
-    { label: "Product Engineering", href: "/services/product-engineering" },
   ],
   Company: [
-    { label: "About", href: "/about" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/contact" },
+    { label: "About Us", href: "/about" },
+    { label: "Case Studies", href: "/portfolio" },
+    { label: "3 Service Offers", href: "/offers" },
+    { label: "Pricing Models", href: "/pricing" },
+    { label: "Contact & Booking", href: "/contact" },
+  ],
+  Readiness: [
+    { label: "Readiness Hub (7/7)", href: "/readiness" },
+    { label: "Discovery Checklist", href: "/discovery-checklist" },
+    { label: "Contract Template", href: "/contract-template" },
+    { label: "Delivery & QA Gates", href: "/delivery-checklist" },
+    { label: "Support & AI Prompts", href: "/support-process" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "/privacy" },
@@ -29,9 +35,9 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-muted/20 px-5 sm:px-6 pt-12 sm:pt-16 pb-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-8 sm:gap-10 mb-10 sm:mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 sm:gap-10 mb-10 sm:mb-12">
           {/* Brand */}
-          <div className="col-span-2 sm:col-span-2 md:col-span-2">
+          <div className="col-span-2 sm:col-span-2 md:col-span-3 lg:col-span-2">
             <Link href="/" className="inline-block group mb-3 sm:mb-4 select-none" aria-label="Virtanex Labs Home">
               <MyCompanyLogoSVG className="h-7 sm:h-8 md:h-9 w-auto text-foreground group-hover:opacity-90 transition-opacity" />
             </Link>

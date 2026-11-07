@@ -80,12 +80,36 @@ export default function ContactPage() {
                       <MapPin className="size-5" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Studio Location</p>
+                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Company Details</p>
                       <p className="text-sm font-semibold text-foreground">
-                        Helsinki, Finland 🇫🇮
+                        {siteConfig.legalName || "Virtanex Labs Oy"}
                       </p>
-                      <p className="text-xs text-muted-foreground">Europe / Nordics (EET Timezone)</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        Business ID: FI3284918-2 · Helsinki, Finland 🇫🇮
+                      </p>
                     </div>
+                  </div>
+
+                  {/* Direct Meeting Booking */}
+                  <div className="p-5 rounded-2xl bg-secondary/50 border border-primary/20 space-y-3">
+                    <div className="flex items-center gap-2">
+                      <Clock className="size-4 text-primary" />
+                      <p className="text-xs font-bold uppercase tracking-wider text-foreground">
+                        Prefer an Instant Meeting?
+                      </p>
+                    </div>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      Skip the form and reserve a 30-minute scoping call directly on our senior architects&apos; calendar.
+                    </p>
+                    <a
+                      href="https://cal.com/virtanexlabs/30min"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-primary text-primary-foreground text-xs font-semibold hover:opacity-90 transition-all shadow-xs"
+                    >
+                      <span>Book a 30-Min Scoping Call</span>
+                      <ArrowRight className="size-3.5" />
+                    </a>
                   </div>
 
                   <div className="flex items-start gap-4">
@@ -93,9 +117,9 @@ export default function ContactPage() {
                       <ShieldCheck className="size-5" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Confidentiality</p>
+                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Confidentiality & Target Clients</p>
                       <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">
-                        We respect your intellectual property. Standard mutual non-disclosure agreements (NDAs) available prior to scoping.
+                        We partner with funded tech ventures, scaleups, and enterprise engineering teams. Standard mutual NDAs signed prior to scoping.
                       </p>
                     </div>
                   </div>

@@ -19,6 +19,7 @@ const CASE_STUDIES = [
     title: "Nordify Cloud Analytics",
     client: "Nordify Oy (Helsinki)",
     category: "Web & Cloud Platform",
+    href: "/portfolio/nordify-cloud",
     description:
       "Engineered an enterprise real-time observability dashboard processing 50M+ events daily with sub-second queries, custom alerting, and role-based permissions.",
     metrics: [
@@ -33,6 +34,7 @@ const CASE_STUDIES = [
     title: "Bloom AI Knowledge Engine",
     client: "Bloom Technologies (Stockholm)",
     category: "AI Automation & Local RAG",
+    href: "/portfolio/bloom-ai-engine",
     description:
       "Designed an autonomous enterprise RAG pipeline connecting internal Notion, Jira, and Google Drive files with strictly grounded citations and zero hallucination risk.",
     metrics: [
@@ -124,8 +126,17 @@ export default function PortfolioPage() {
                       {project.client}
                     </p>
                     <h3 className="text-2xl font-bold text-foreground mb-3 flex items-center justify-between">
-                      {project.title}
-                      <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                      {project.href ? (
+                        <Link href={project.href} className="hover:text-primary transition-colors flex items-center justify-between w-full">
+                          <span>{project.title}</span>
+                          <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                        </Link>
+                      ) : (
+                        <>
+                          <span>{project.title}</span>
+                          <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                        </>
+                      )}
                     </h3>
                     <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-6">
                       {project.description}
